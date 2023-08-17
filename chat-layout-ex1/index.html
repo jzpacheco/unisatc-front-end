@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 18px;
+            max-width: 560px;
+        }
+        .page {
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .page h3 {
+            padding: 15px 10px;
+            margin: 0;
+            color: #ff00c8;
+        }
+        header {
+            border-bottom: 2px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        header img {
+            width: auto;
+            height: 2em;
+        }
+        .page form {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            margin: 7px;
+            height: 30px;
+        }
+    
+        .page form input[type="text"] {
+            font-size: 18px;
+            flex: 1;
+            outline: 0;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding-left: 10px;
+        }
+    
+        .page form button[type="reset"] {
+            width: 30px;
+            height: 30px;
+            border: 0px;
+            border-radius: 50%;
+            cursor: pointer;
+            background-color: #39af4c;
+            background-image: url("img/enviar-mensagem.png");
+            background-size: 60%;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-color 0.3s;
+        }
+    
+        .page form button[type="reset"]:hover {
+            background-color: #2d8730;
+        }
+        .page .mensagens {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin: 7px 0;
+            padding: 10px;
+        }
+    
+        .page .mensagens p {
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            margin: 0;
+            padding: 5px 10px;
+        }
+    
+        .page .mensagens label {
+            font-weight: bold;
+            color: #555;
+        }
+    
+        .page .mensagens .mensagem-recebida,
+        .page .mensagens .mensagem-enviada {
+            max-width: 300px;
+            margin: 10px 0;
+        }
+    
+        .page .mensagens .mensagem-enviada {
+            align-self: flex-end;
+            text-align: right;
+            margin-left: auto;
+        }
+    
+        .page .mensagens .mensagem-enviada p {
+            background-color: #e0fcd4;
+            text-align: left;
+        }
+        .page .mensagens .mensagem-recebida p {
+            background-color:#FFFFFF;
+
+            text-align: left;
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <div class="page">
+        <header>
+             <h3>Atendimento on-line</h3>
+             <img src="img/atendimento.png" alt="">
+        </header>
+        <div class = "mensagens">
+            <div class = "mensagem-recebida">
+                <label for="mensagens1">Atendente diz:</label>
+                <p id = "mensagens1">Blabla blabla blabla</p>
+                <label for="mensagens2">Atendente diz:</label>
+                <p id = "mensagens2">Blabla blabla blabla</p>
+            </div>
+        <div class = "mensagem-enviada">
+            <label for="msg-enviada1">Você diz:</label>
+            <p id="msg-enviada1">Blabla blabla blabla</p>
+            <label for="msg-enviada2">Você diz:</label>
+            <p id="msg-enviada2">Blabla blabla blabla</p>
+        </div>
+        <div class = "mensagem-enviada"></div>
+    </div>
+    <form action="post">
+        <input type="text" placeholder="Digite sua mensagem...">
+        <!--Deixei type=reset apenas para dar efeito de "envio"-->
+        <button type="reset"></button>
+    </form>
+</div>
+</body>
+</html>
