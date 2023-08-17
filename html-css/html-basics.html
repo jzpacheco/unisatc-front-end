@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 16px;
+            color: rgb(7, 235, 243);
+            background-color: black;
+        }
+
+        p{
+            background-color: green;
+            margin: 20px 16px ;
+            padding: 16px 26px;
+            border-radius: 12px;
+            text-indent: 5px;
+        }
+
+        form {
+            border: 2px solid red;
+            padding: 16px;
+            margin-bottom: 32px;
+            background-color: gray;
+        }
+        
+        form div label {
+            display: inline-block;
+            text-align: left;
+            font-weight: bold;
+            width: 130px;
+            margin-bottom: 4px;
+            
+        }
+        
+        form div{
+            margin-bottom: 16px;
+        }
+        
+        form h3 {
+            font-size: 16px;
+        }
+        
+        form button {
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: black;
+            color: white;
+            border:0;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+        
+        form button:hover{
+            background-color: red;
+            font-size: 24px;
+        }
+        
+        form div input,
+        form div select {
+            display: block;
+            border: 1px solid black;
+            border-radius: 8px;
+            font-size: 18px;
+            padding: 7px 12px;
+            outline: 0;
+            size: 200px;
+        }
+        
+        form div input:focus{
+            border-color: red;
+        }
+        
+        form button[type=reset]{
+            background-color: blue;
+        }
+        
+        .vermelhinho{
+            background-color: red;
+            color: white;
+            
+        }
+        
+        .gigante{
+            font-size: 24px;
+        }
+        
+        form .row-button {
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+        }
+        
+        form div .input-radio{
+            display: inline;
+            color: red;
+        }
+        </style>
+</head>
+<body>
+    
+    <p class = "vermelhinho">teste de frase<br> mais longa socorro</p>
+    <p class = "vermelhinho gigante" ><strong>segunda</strong> frase <a href="https://www.cocacola.com.br">clique aqui</a></p>
+    <p><strong>segunda</strong> frase <a href="https://www.cocacola.com.br">clique aqui</a></p>
+    
+    <form method="post" action="https://postman-echo.com/post">
+        <div>
+            <label for="nome">Seu nome:</label>
+            <input id="nome" name="nome" placeholder="Informe o seu nome" required="required">
+        </div>
+        <div>
+            <label for="email">Seu e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Informe o seu e-mail" required="required">
+        </div>
+        <div>
+            <label for="estado">Seu estado:</label>
+            <select id="estado" name="estado" required="required">
+                <option value="">Selecione um Estado</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="PR">Paraná</option>
+            </select>
+        </div>
+        <div class = "row-button">
+            <h3>Deseja receber informações?</h3>
+            <div class = "input-radio">
+                <input type="radio" id="info-sim" name="info" value="sim" required />
+                <label for="info-sim">Sim</label>
+            </div>
+            <div class = "input-radio">
+                <input type="radio" id="info-nao" name="info" value="nao" required />
+                <label for="info-nao">Não</label>
+            </div>
+        </div>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+
+    <table border="1">
+        <!--tr é linha-->
+        <tr>
+            <!--th é tag cabeçalho de tabela-->
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>CPF</th>
+        </tr>
+        <tr>
+            <!--td é Coluna-->
+            <td>teste 1</td>
+            <td>teste 2</td>
+            <td>teste 3</td>
+        </tr>
+        <tr>
+            <td>teste 1</td>
+            <!--colspan serve para "tapar" buraco na table em caso da linha ter menos colunas que o definido na tag th-->
+            <td colspan="2" align="center">teste 2</td>
+        </tr>
+        <tr>
+            <td>teste 1</td>
+            <td>teste 2</td>
+            <td>teste 3</td>
+        </tr>
+    </table>
+</body>
+
+</html>
