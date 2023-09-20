@@ -18,7 +18,30 @@
           Durante todo o desenvolvimento, para melhorar nossos testes sugiro estarem com o Console de Debug do Chrome
           aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
         </p>
+
+        <div id="conteudo"></div>
+
+        <button id="btAddPara" class="bg-red-600 p-2 font-bold text-white rounded-lg shadow-lg">
+          Adiciona Parágrafo
+        </button>
       </main>
     </div>
+
+    <script>
+      function addParagrafo() {
+        const novoParagrafo = document.createElement("p");
+        novoParagrafo.innerHTML = "<strong>Meu novo parágrafo!</strong>";
+        novoParagrafo.classList.add("text-2xl", "text-center");
+        novoParagrafo.addEventListener("click", function () {
+          conteudo.removeChild(novoParagrafo);
+        });
+
+        const conteudo = document.querySelector("#conteudo");
+        conteudo.appendChild(novoParagrafo);
+      }
+
+      const btAddPara = document.querySelector("#btAddPara");
+      btAddPara.addEventListener("click", addParagrafo);
+    </script>
   </body>
 </html>

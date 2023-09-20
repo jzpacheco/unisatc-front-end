@@ -21,14 +21,30 @@
       </main>
     </div>
     <script>
-      let idade = 58;
+      let idade = 16;
+      if (idade >= 18 && idade < 30) {
+        console.log("Maior que 18 anos");
+      } else if (idade >= 30) {
+        console.log("Idoso");
+      } else {
+        console.log("Menor que 18 anos");
+      }
 
-      if(idade >= 18 && idade <30){
-        console.log("Maior que 18 anos")
-      }else if (idade >=30 ){
-        console.log("Idoso")
-      }else {
-        console.log("Menor de idade")
+      let ligado = "";
+      if (ligado !== false) {
+        console.log("Ta ligado!");
+      }
+
+      let estoque = 2;
+      if (estoque > 0) {
+        console.log("Temos estoque!");
+      } else {
+        console.log("Estoque vazio =(");
+      }
+
+      let teste = "";
+      if (teste === false) {
+        console.log("É falso");
       }
     </script>
   </body>

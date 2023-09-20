@@ -18,28 +18,30 @@
           Durante todo o desenvolvimento, para melhorar nossos testes sugiro estarem com o Console de Debug do Chrome
           aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
         </p>
-        <button 
+        <button
           id="btnMudar"
           class="bg-red-500 font-bold p-3 text-white rounded-lg shadow-lg hover:bg-blue-500 transition-all duration-300">
-          Alterar Nome</button>
+          Alterar Nome
+        </button>
       </main>
     </div>
+
     <script>
-      let nome ="Jefferson";
+      let nome = "Lucas";
       console.log(nome);
-      
+
       nome = "Pedro";
       console.log(nome);
 
       function alteraNome() {
-        if (nome == "João"){
-          nome = "Thiago"
-        }else{
+        if (nome == "João") {
+          nome = "Tiago";
+        } else {
           nome = "João";
         }
       }
-      
-      document.getElementById("btnMudar").onclick = function (){
+
+      document.getElementById("btnMudar").onclick = function () {
         alteraNome();
         console.log(nome);
       };

@@ -19,41 +19,73 @@
           aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
         </p>
       </main>
-
-      <script>
-        let lista = ["Pão", "Queijo", "Presunto"]
-        console.log(lista)
-
-        lista.push("Alface")
-        lista.push("Tomate")
-        console.log(lista)
-        lista.pop();
-        lista.pop();
-        console.log(lista)
-        
-        lista.splice(1,1);
-        console.log(lista)
-
-        let numeros = [ 1, 2, 3, 4, 5, 6];
-        console.log(numeros);
-
-        numeros.forEach(function (item){
-
-          console.log(item *2)
-        });
-
-        numeros = numeros.map(function(item){
-          item = item * 2;
-          return item;
-        })
-        console.log(numeros)
-        
-        let total = numeros.reduce(function(total,item) {
-          return total + item;
-        }, 0)
-        
-        console.log(total)
-        </script>
     </div>
+    <script>
+      let lista = ["pão", "queijo", "presunto"];
+      console.log(lista.length);
+      console.log(lista);
+
+      lista.push("alface");
+      lista.push("tomate");
+      console.log(lista);
+
+      lista.pop();
+      console.log(lista);
+
+      lista.splice(2, 1);
+      console.log(lista);
+
+      lista.splice(lista.indexOf("queijo"), 1);
+      console.log(lista);
+
+      // para esvaziar a lista
+      lista.length = 0;
+      console.log(lista);
+
+      let numeros = [1, 2, 3, 4, 5, 6];
+      numeros.forEach(function (item) {
+        // cada vez o item sera um item diferente
+        item = item + 2;
+      });
+      console.log(numeros);
+
+      numeros = numeros.map(function (item) {
+        // cada vez o item sera um item diferente
+        item = item + 2;
+        return item;
+      });
+      console.log(numeros);
+
+      let total = numeros.reduce(function (acc, item) {
+        return acc + item;
+      }, 0);
+      console.log(total);
+
+      let acessorios = ["radio", "ar-condicionado", "vidro eletrico", "alarme"];
+      let carroCompleto = ["roda", "volante", ...acessorios, "porta", "motor"];
+
+      let a = [1, 2, 3];
+      let b = [4, 5, 6];
+      console.log([...a, ...b]);
+
+      console.log(carroCompleto);
+
+      var pessoa = {
+        nome: "Lucas",
+        depto: "TI",
+      };
+      console.log(pessoa);
+
+      class Empregado {
+        constructor(nome, depto) {
+          this.nome = nome;
+          this.depto = depto;
+        }
+      }
+
+      let e1 = new Empregado("Lucas", "TI");
+      let e2 = new Empregado("Pedro", "TI");
+      console.log(e1, e2);
+    </script>
   </body>
 </html>

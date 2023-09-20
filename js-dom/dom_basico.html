@@ -18,7 +18,87 @@
           Durante todo o desenvolvimento, para melhorar nossos testes sugiro estarem com o Console de Debug do Chrome
           aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
         </p>
+        <p class="border border-gray-400 bg-green-200 px-3 py-2 rounded-lg mb-6">
+          Durante todo o desenvolvimento, para melhorar nossos testes sugiro estarem com o Console de Debug do Chrome
+          aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
+        </p>
+        <p class="border border-gray-400 bg-gray-200 px-3 py-2 rounded-lg mb-6">
+          Durante todo o desenvolvimento, para melhorar nossos testes sugiro estarem com o Console de Debug do Chrome
+          aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
+        </p>
+        <p class="border border-gray-400 bg-gray-200 px-3 py-2 rounded-lg mb-6">
+          Durante todo o desenvolvimento, para melhorar nossos testes sugiro estarem com o Console de Debug do Chrome
+          aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
+        </p>
+        <p class="border border-gray-400 bg-gray-200 px-3 py-2 rounded-lg mb-6">
+          Durante todo o desenvolvimento, para melhorar nossos testes sugiro estarem com o Console de Debug do Chrome
+          aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
+        </p>
+
+        <button id="btTitulo" class="bg-red-600 p-2 font-bold text-white rounded-lg shadow-lg">Mudar Título</button>
+        <button id="btParagrafos" class="bg-blue-600 p-2 font-bold text-white rounded-lg shadow-lg">
+          Mudar Parágrafos
+        </button>
+        <button id="btAtualizar" class="bg-green-600 p-2 font-bold text-white rounded-lg shadow-lg">Redefinir</button>
+        <button id="btGoogle" class="bg-purple-600 p-2 font-bold text-white rounded-lg shadow-lg">
+          ir para o google
+        </button>
+        <button id="btVoltar" class="bg-orange-600 p-2 font-bold text-white rounded-lg shadow-lg">Voltar</button>
       </main>
     </div>
+    <script>
+      function mudaTitulo() {
+        const titulo = document.querySelector("h1");
+        titulo.innerText = "Teste de Título";
+        titulo.style.border = "2px solid red";
+      }
+
+      // setTimeout(mudaTitulo, 3000);
+
+      const btTitulo = document.querySelector("#btTitulo");
+      if (btTitulo) {
+        btTitulo.onclick = function () {
+          mudaTitulo();
+        };
+      }
+
+      function mudaParagrafos() {
+        const paras = document.querySelectorAll("main p");
+        if (paras.length > 0) {
+          for (let i = 0; i < paras.length; i++) {
+            paras[i].style.border = "2px solid red";
+            paras[i].innerHTML = "<h2 class='text-2xl font-bold'>Outro Título</h2>";
+          }
+        }
+      }
+
+      const btParagrafos = document.querySelector("#btParagrafos");
+      if (btParagrafos) {
+        btParagrafos.onclick = function () {
+          mudaParagrafos();
+        };
+      }
+
+      const btAtualizar = document.querySelector("#btAtualizar");
+      if (btAtualizar) {
+        btAtualizar.onclick = function () {
+          location.reload();
+        };
+      }
+
+      const btGoogle = document.querySelector("#btGoogle");
+      if (btGoogle) {
+        btGoogle.onclick = function () {
+          location.href = "https://google.com";
+        };
+      }
+
+      const btVoltar = document.querySelector("#btVoltar");
+      if (btVoltar) {
+        btVoltar.onclick = function () {
+          history.back();
+        };
+      }
+    </script>
   </body>
 </html>

@@ -18,7 +18,46 @@
           Durante todo o desenvolvimento, para melhorar nossos testes sugiro estarem com o Console de Debug do Chrome
           aberto, para isso utilizem a tecla <kbd>F12</kbd> e procure pela aba <strong>Console</strong>.
         </p>
+
+        <button id="btTitulo" class="bg-red-600 p-2 font-bold text-white rounded-lg shadow-lg">Mudar Título</button>
+
+        <input
+          type="text"
+          placeholder="Digite o seu nome"
+          id="txtTitulo"
+          class="border border-gray-400 px-3 py-2 rounded-lg mb-6" />
       </main>
     </div>
+
+    <script>
+      function mudarTitulo() {
+        const titulo = document.querySelector("header h1");
+        titulo.innerText = "Mutcho Louco!";
+      }
+
+      function mudarParagrafo() {
+        const para = document.querySelector("main p");
+        para.innerHTML = "<strong>Paragrafo doidão!</strong>";
+      }
+
+      const para = document.querySelector("main p");
+      para.addEventListener("mouseover", function () {
+        para.innerText = "SAI DE CIMA!";
+      });
+      para.addEventListener("mouseout", function () {
+        para.innerText = "ATÉ QUE ENFIM";
+      });
+
+      const btTitulo = document.querySelector("#btTitulo");
+      btTitulo.addEventListener("click", mudarTitulo);
+      btTitulo.addEventListener("click", mudarParagrafo);
+
+      const txtTitulo = document.querySelector("#txtTitulo");
+      if (txtTitulo) {
+        txtTitulo.addEventListener("input", function () {
+          txtTitulo.value = txtTitulo.value.toUpperCase();
+        });
+      }
+    </script>
   </body>
 </html>
